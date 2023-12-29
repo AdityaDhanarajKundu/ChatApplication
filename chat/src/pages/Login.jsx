@@ -7,7 +7,7 @@ function Login(){
         <div className="formContainer">
             <div className="formWrapper">
                 <span className="logo">Chatify</span>
-                <span className="title">Register</span>
+                <span className="title">Login</span>
                 <form>
                     <input type="email" placeholder="Email"/>
                     <input type="password" placeholder="Password"/>
