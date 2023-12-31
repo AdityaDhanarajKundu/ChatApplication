@@ -2,7 +2,17 @@ import React from 'react'
 
 const Search = () => {
   return (
-    <div>Search</div>
+    <div className='search'>
+      <div className="searchForm">
+        <input type="text" placeholder='Find a user' />
+      </div>
+      <div className="userChat">
+        <img src="https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="image" />
+        <div className="userChatInfo">
+          <span>Alicia</span>
+        </div>
+      </div>
+    </div>
   );
 }
 
