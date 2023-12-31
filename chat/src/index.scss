@@ -102,5 +102,14 @@
     border-radius: 10px;
     width: 65%;
     height: 80%;
+    display: flex;
+    overflow: hidden;
+    .sidebar{
+      flex: 1;
+      background-color: #3e3c61;
+    }
+    .chat{
+      flex: 2;
+    }
   }
 }
