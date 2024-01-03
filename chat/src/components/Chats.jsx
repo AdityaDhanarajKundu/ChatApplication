@@ -2,10 +2,12 @@ import { useState, useEffect, useContext } from "react";
 import { doc, onSnapshot } from "firebase/firestore";
 import { db } from "../firebase";
 import { AuthContext } from "../context/AuthContext";
+import { ChatContext } from "../context/ChatContext";
 
 const Chats = () => {
   const [chats, setChats] = useState([]);
   const { currentUser } = useContext(AuthContext);
+  const {dispatch} = useContext(ChatContext);
 
   useEffect(() => {
     function getChats() {
@@ -22,6 +24,10 @@ const Chats = () => {
 
     currentUser.uid && getChats();
   }, [currentUser.uid]);
+
+  function handleSelect(user){
+    dispatch({type: "CHANGE_USER", payload: user});
+  }
 
   return (
     <div className="chats">
