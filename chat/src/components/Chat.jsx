@@ -3,12 +3,17 @@ import Add from "../assets/add.png";
 import More from "../assets/more.png";
 import Messages from "./Messages";
 import Input from "./Input";
+import { ChatContext } from "../context/ChatContext";
+import { useContext } from "react";
 
 const Chat = () => {
+
+  const {data} = useContext(ChatContext);
+  
   return (
     <div className='chat'>
       <div className="chatInfo">
-        <span>Alicia</span>
+        <span>{data.user?.displayName}</span>
         <div className="chatIcons">
           <img src={Cam} alt="cam" />
           <img src={Add} alt="add" />
